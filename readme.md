@@ -16,11 +16,16 @@ My model wins 85% games with random agent and 14% games with Negamax agent (KAGG
 2. Reward function effects.  
 
 # Summary results
-![results_graph](https://i.ibb.co/L5VtYF3/results.png)
+![results_graph](https://i.ibb.co/2qTFvDh/results.png)
 
+# Example win with random agent
+![win_with_random](https://i.ibb.co/FYXpC1j/win-with-random.png)
+
+# Example win with trained Negamax agent (from KAGGLE)
+![win_with_negamax](https://i.ibb.co/PCCpv2V/win-with-negamax.png)
 
 # Model and Agent
-See whole code in (train notebook)[2_train_model_ipynb]
+See whole code in `2_train_model.ipynb`
 
 ## `PyTorch` Model
 ```python
@@ -34,7 +39,7 @@ class DQN(nn.Module):
     ):
         super(DQN, self).__init__()
         
-        # network
+        # layers
         self.input_layer = nn.Linear(*input_dims, 128)
         self.middle_layer = nn.Linear(128, 128)
         self.output_layer = nn.Linear(128, n_actions)
