@@ -1,5 +1,5 @@
-Model,TrainingGames,TrainingWins,RewardFunction,WinsWithRandomRatio,WinsWithNegamaxRatio
-base,1000,46,-1: loose / 1: win,0.78,0.052
-only_extra__rewards,10000,82,1: every 5th round / 2: every 10th round / 5: win / 0: other,0,0
-punishment_and_extra_rewards,10000,425,-1: loose; 1: every 5th round; 5: win,0.83,0.068
+Model,TrainingGames,RewardFunction,WinsWithRandomRatio,WinsWithNegamaxRatio
+base,1000,-1: loose / 1: win,0.78,0.052
+only_extra__rewards,10000,1: every 5th round / 2: every 10th round / 5: win / 0: other,0.74,0
+punishment_and_extra_rewards,10000,-1: loose; 1: every 5th round; 5: win,0.83,0.068
 extra_punishment,10000,-3: loose before 10th round; -1: loose; 1: every 5th round,0.85,0.136
